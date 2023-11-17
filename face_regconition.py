@@ -89,7 +89,8 @@ def video_attendance():
 
         update_csv(path_csv,present_student)
         cv2.imshow('Webcam',img)
-        cv2.waitKey(1)
+        if cv2.waitKey(1) == 27 or cv2.waitKey(1) == 'q':
+            break
 
 
 if __name__ == "__main__":
